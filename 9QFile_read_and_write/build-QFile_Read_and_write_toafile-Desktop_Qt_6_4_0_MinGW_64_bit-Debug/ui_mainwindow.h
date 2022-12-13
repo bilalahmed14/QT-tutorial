@@ -32,6 +32,7 @@ public:
     QHBoxLayout *horizontalLayout;
     QPushButton *pushButton;
     QPushButton *pushButton_2;
+    QPushButton *pushButton_3;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -69,6 +70,11 @@ public:
 
         verticalLayout_2->addLayout(verticalLayout);
 
+        pushButton_3 = new QPushButton(centralwidget);
+        pushButton_3->setObjectName("pushButton_3");
+
+        verticalLayout_2->addWidget(pushButton_3);
+
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -88,6 +94,7 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "write", nullptr));
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "read", nullptr));
+        pushButton_3->setText(QCoreApplication::translate("MainWindow", "find a text file and open it", nullptr));
     } // retranslateUi
 
 };
