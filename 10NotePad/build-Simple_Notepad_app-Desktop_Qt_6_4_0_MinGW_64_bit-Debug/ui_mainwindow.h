@@ -35,6 +35,10 @@ public:
     QAction *actionRedo;
     QAction *actionUndo;
     QAction *actionInfo;
+    QAction *actionFont;
+    QAction *actionColor;
+    QAction *actionBackground_color;
+    QAction *actionBackground_color_edit_text;
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout;
     QTextEdit *textEdit;
@@ -99,6 +103,14 @@ public:
         QIcon icon9;
         icon9.addFile(QString::fromUtf8(":/res/img/icons8-info-popup-64.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionInfo->setIcon(icon9);
+        actionFont = new QAction(MainWindow);
+        actionFont->setObjectName("actionFont");
+        actionColor = new QAction(MainWindow);
+        actionColor->setObjectName("actionColor");
+        actionBackground_color = new QAction(MainWindow);
+        actionBackground_color->setObjectName("actionBackground_color");
+        actionBackground_color_edit_text = new QAction(MainWindow);
+        actionBackground_color_edit_text->setObjectName("actionBackground_color_edit_text");
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         verticalLayout = new QVBoxLayout(centralwidget);
@@ -137,6 +149,10 @@ public:
         menuEdit->addSeparator();
         menuEdit->addAction(actionRedo);
         menuEdit->addAction(actionUndo);
+        menuEdit->addAction(actionFont);
+        menuEdit->addAction(actionColor);
+        menuEdit->addAction(actionBackground_color);
+        menuEdit->addAction(actionBackground_color_edit_text);
         menuAbout->addAction(actionInfo);
 
         retranslateUi(MainWindow);
@@ -157,6 +173,10 @@ public:
         actionRedo->setText(QCoreApplication::translate("MainWindow", "Redo", nullptr));
         actionUndo->setText(QCoreApplication::translate("MainWindow", "Undo", nullptr));
         actionInfo->setText(QCoreApplication::translate("MainWindow", "Info", nullptr));
+        actionFont->setText(QCoreApplication::translate("MainWindow", "Font", nullptr));
+        actionColor->setText(QCoreApplication::translate("MainWindow", "Color", nullptr));
+        actionBackground_color->setText(QCoreApplication::translate("MainWindow", "Background color", nullptr));
+        actionBackground_color_edit_text->setText(QCoreApplication::translate("MainWindow", "Background color edit text", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
         menuAbout->setTitle(QCoreApplication::translate("MainWindow", "About", nullptr));

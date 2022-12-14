@@ -4,6 +4,10 @@
 #include "QFileDialog"
 #include "QTextStream"
 #include "QMessageBox"
+#include "QFont"
+#include "QFontDialog"
+#include "QColor"
+#include "QColorDialog"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -121,5 +125,49 @@ void MainWindow::on_actionInfo_triggered()
     message += "simple Text editor, or so called Notepad\n";
     message += "created: 2022";
     QMessageBox::about(this, "About me",message);
+}
+
+
+void MainWindow::on_actionFont_triggered()
+{
+    bool ok;
+    QFont font = QFontDialog::getFont(&ok, this);
+    if(ok)
+    {
+        ui->textEdit->setFont(font);
+    } else return;
+
+}
+
+
+void MainWindow::on_actionColor_triggered()
+{
+    QColor color = QColorDialog::getColor(Qt::white, this, "choose color");
+    if(color.isValid())
+    {
+        ui->textEdit->setTextColor(color);
+    }
+}
+
+
+void MainWindow::on_actionBackground_color_triggered()
+{
+    QColor color = QColorDialog::getColor(Qt::white, this, "choose color");
+    if(color.isValid())
+    {
+        ui->textEdit->setTextBackgroundColor(color);
+    }
+}
+
+
+void MainWindow::on_actionBackground_color_edit_text_triggered()
+{
+    QColor color = QColorDialog::getColor(Qt::white, this, "choose color");
+    QPalette palette;
+    palette.setColor(QPalette::Base,color);
+    if(color.isValid())
+    {
+        ui->textEdit->setPalette(palette);
+    }
 }
 

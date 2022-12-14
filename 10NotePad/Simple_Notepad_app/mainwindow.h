@@ -37,6 +37,14 @@ private slots:
 
     void on_actionInfo_triggered();
 
+    void on_actionFont_triggered();
+
+    void on_actionColor_triggered();
+
+    void on_actionBackground_color_triggered();
+
+    void on_actionBackground_color_edit_text_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString filepath;
