@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPlainTextEdit>
@@ -33,6 +34,7 @@ public:
     QPushButton *pushButton;
     QPushButton *pushButton_2;
     QPushButton *pushButton_3;
+    QLabel *label_timeshow;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -75,6 +77,15 @@ public:
 
         verticalLayout_2->addWidget(pushButton_3);
 
+        label_timeshow = new QLabel(centralwidget);
+        label_timeshow->setObjectName("label_timeshow");
+        QFont font;
+        font.setPointSize(26);
+        font.setBold(true);
+        label_timeshow->setFont(font);
+
+        verticalLayout_2->addWidget(label_timeshow);
+
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -95,6 +106,7 @@ public:
         pushButton->setText(QCoreApplication::translate("MainWindow", "write", nullptr));
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "read", nullptr));
         pushButton_3->setText(QCoreApplication::translate("MainWindow", "find a text file and open it", nullptr));
+        label_timeshow->setText(QString());
     } // retranslateUi
 
 };

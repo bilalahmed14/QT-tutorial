@@ -6,6 +6,7 @@
 #include "QFileDialog"
 #include "QDir"
 #include "QTimer"
+#include "QDateTime"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -14,7 +15,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(myfunction()));
-    timer->start(100);
+    timer->start(1000);
 }
 
 MainWindow::~MainWindow()
@@ -24,7 +25,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::myfunction()
 {
-    qDebug() << "updat..";
+    QTime time = QTime::currentTime();
+    QString time_text = time.toString("hh : mm : ss");
+    ui->label_timeshow->setText(time_text);
 }
 
 

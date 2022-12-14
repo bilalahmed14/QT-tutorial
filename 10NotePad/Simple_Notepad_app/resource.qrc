@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>C:/Users/Bilal Ahmed/Downloads/icons8-info-popup-64.png</file>
+        <file>C:/Users/Bilal Ahmed/Downloads/icons8-go-back-48.png</file>
+        <file>C:/Users/Bilal Ahmed/Downloads/icons8-reset-48.png</file>
+        <file>C:/Users/Bilal Ahmed/Downloads/icons8-paste-64.png</file>
+        <file>C:/Users/Bilal Ahmed/Downloads/icons8-documents-48.png</file>
+        <file>C:/Users/Bilal Ahmed/Downloads/icons8-cut-48.png</file>
+        <file>C:/Users/Bilal Ahmed/Downloads/icons8-save-94.png</file>
+        <file>C:/Users/Bilal Ahmed/Downloads/icons8-save-as-64.png</file>
+        <file>C:/Users/Bilal Ahmed/Downloads/icons8-save-32.png</file>
+        <file>C:/Users/Bilal Ahmed/Downloads/icons8-add-file-64.png</file>
+        <file>C:/Users/Bilal Ahmed/Downloads/icons8-open-file-folder-48.png</file>
+    </qresource>
+</RCC>
